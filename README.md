@@ -60,6 +60,28 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps) was to build an application to complete the given user stories.
 
+## Roadmap
+
+### Milestone 1
+
+- [x] Add ESLint
+- [ ] I can see a list of jobs in a city by default
+- [ ] I can search for jobs with a given keyword
+- [ ] I can search for jobs with a city name, zip code or other location
+- [ ] I can select one option from at least 4 pre-defined options
+- [ ] I can search for a full-time job only
+
+### Milestone 2
+
+- [ ] I can see a list of jobs with their logo, company name, location, and posted time.
+- [ ] When I select a job, I can see job descriptions and how to apply like the given design.
+- [ ] When I am on the job details page, I can go back to the search page
+
+### Milestone 3
+
+- [ ] I can see a list of jobs in the closest city from my location by default
+- [ ] I can see jobs in different pages, 5 items each page
+
 ## How To Use
 
 <!-- Example: -->
