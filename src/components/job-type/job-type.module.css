@@ -1,0 +1,14 @@
+.job_container {
+  display: inline-flex;
+  /* grid-template-rows: auto 1fr auto; */
+  flex: 1;
+  margin-top: 30px;
+}
+
+.job_container input[type='checkbox'] {
+  border: 1px solid #b9bdcf;
+  box-sizing: border-box;
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+}

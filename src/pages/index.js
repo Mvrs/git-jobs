@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from '../../styles/Home.module.css'
+import JobType from '../components/job-type/job-type'
 import Layout from '../components/layout/layout'
 import Search from '../components/search/search'
 
@@ -20,6 +21,7 @@ export default function Home() {
             placeholder="Title, companies, expertise or benefits"
             onChange={onInputChange}
           />
+          <JobType />
         </div>
       </div>
     </Layout>
