@@ -5,7 +5,7 @@ import styles from './search.module.css'
 const useStyles = makeStyles(theme => ({
   root: {
     margin: theme.spacing(2.2),
-    position: 'absolute',
+    position: 'absolute !important',
   },
 }))
 
