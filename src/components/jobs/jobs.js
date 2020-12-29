@@ -71,7 +71,8 @@ const Jobs = ({ positions }) => {
                       color="disabled"
                     />
                     <div className={styles.location}>
-                      {days_passed(today.getTime(), job.created_at) > today
+                      {days_passed(today.getTime(), job.created_at) >
+                      today.getUTCDate()
                         ? `${days_passed(
                             today.getTime(),
                             job.created_at,
