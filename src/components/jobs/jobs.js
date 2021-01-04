@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function days_passed(currentDate, pastDate) {
+export function days_passed(currentDate, pastDate) {
   let current = new Date(currentDate)
   let previous = new Date(pastDate)
 
@@ -42,7 +42,7 @@ const Jobs = ({ positions }) => {
     <div>
       {positions
         ? positions.map(job => (
-            <Link href={`${job.url}`} key={job.id}>
+            <Link href={`positions/${job.id}`} key={job.id}>
               <div className={styles.row}>
                 {job.company_logo ? (
                   <div className={styles.company_logo}>
