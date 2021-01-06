@@ -6,22 +6,6 @@
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
 </div>
 
-<div align="center">
-  <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
-    </a>
-    <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps">
-      Challenge
-    </a>
-  </h3>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
@@ -36,9 +20,9 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://user-images.githubusercontent.com/5723692/103759063-f60c0080-4fc7-11eb-8dc2-6a6c206c5022.png)
 
-This was my first attempt diving into NextJs, I've watched videos on the
+This was my first attempt diving into NextJs. 
 
 ### Built With
 
