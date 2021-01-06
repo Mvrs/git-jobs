@@ -96,6 +96,7 @@
 .job_type {
   border: 1px solid #334680;
   background-color: white;
+  padding: 6px;
   width: 63px;
   height: 26px;
   margin-top: 14px;
