@@ -22,7 +22,7 @@
 
 ![screenshot](https://user-images.githubusercontent.com/5723692/103759063-f60c0080-4fc7-11eb-8dc2-6a6c206c5022.png)
 
-This was my first attempt diving into NextJs. 
+This was my first attempt diving into NextJs.
 
 ### Built With
 
@@ -52,6 +52,10 @@ This was my first attempt diving into NextJs.
 
 - [x] I can see a list of jobs in the closest city from my location by default
 - [ ] I can see jobs in different pages, 5 items each page
+
+### Milestone 4
+
+- [ ] Add Dark theme
 
 ## How To Use
 
