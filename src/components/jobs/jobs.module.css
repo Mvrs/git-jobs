@@ -11,6 +11,7 @@
 
   box-shadow: var(--box-shadow);
   font-weight: 500;
+  cursor: pointer;
 
   transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
@@ -123,4 +124,10 @@
   font-size: 12px;
   margin-left: 7.5px;
   color: var(--primary-gray-color);
+}
+
+@media screen and (max-width: 420px) {
+  .row {
+    margin-top: 25px;
+  }
 }

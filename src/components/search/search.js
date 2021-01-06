@@ -9,15 +9,30 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Search({ ...props }) {
+function Search({ getNewSearch, setIsDescription, ...props }) {
   const classes = useStyles()
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    getNewSearch()
+  }
 
   return (
     <div className={styles.wrapper}>
-      <form className={styles.input_container}>
+      <form
+        className={styles.input_container}
+        onSubmit={e => {
+          handleSubmit(e)
+        }}
+      >
         <WorkOutlineOutlined className={classes.root} color="disabled" />
-        <input type="text" className={styles.input} {...props} />
-        <button id="submit" name="submit">
+        <input
+          type="text"
+          className={styles.input}
+          onChange={e => setIsDescription(e.target.value)}
+          {...props}
+        />
+        <button id="submit" name="submit" style={{ cursor: 'pointer' }}>
           Search
         </button>
       </form>

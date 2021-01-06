@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
 import PublicRoundedIcon from '@material-ui/icons/PublicRounded'
 import AccessTimeIcon from '@material-ui/icons/AccessTime'
 import { makeStyles } from '@material-ui/core'
@@ -7,10 +9,6 @@ import styles from './jobs.module.css'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // margin: theme.spacing(2.2),
-    // display: 'inline-flex',
-    // display: 'inline-flex',
-    // position: 'relative',
     marginTop: '26px',
   },
   date_posted: {
@@ -20,23 +18,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export function days_passed(currentDate, pastDate) {
-  let current = new Date(currentDate)
-  let previous = new Date(pastDate)
-
-  let difference = current.getTime() - previous.getTime()
-  const hours = Math.floor(difference / 3600) % 24
-
-  let days = Math.floor(difference / (1000 * 3600 * 24))
-
-  return days >= hours ? days : hours
-}
+TimeAgo.addLocale(en)
 
 const Jobs = ({ positions }) => {
-  // const [direction, setDirection] = useState(null)
-  // const [value, setValue] = useState(null)
   const classes = useStyles()
-  var today = new Date()
+
+  const timeAgo = new TimeAgo('en-US')
 
   return (
     <div>
@@ -71,13 +58,7 @@ const Jobs = ({ positions }) => {
                       color="disabled"
                     />
                     <div className={styles.location}>
-                      {days_passed(today.getTime(), job.created_at) >
-                      today.getUTCDate()
-                        ? `${days_passed(
-                            today.getTime(),
-                            job.created_at,
-                          )} days ago `
-                        : `${days_passed(today.getTime(), job.created_at)} hrs`}
+                      {timeAgo.format(Date.parse(job.created_at))}
                     </div>
                   </div>
                 </div>
