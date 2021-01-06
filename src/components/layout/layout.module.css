@@ -9,11 +9,11 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 420px) {
+/* @media screen and (max-width: 420px) {
   .container {
-    display: inline-grid;
+    display: inline-;
   }
-}
+} */
 
 .header {
   display: flex;
