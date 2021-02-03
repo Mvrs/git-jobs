@@ -56,6 +56,7 @@ This was my first attempt diving into NextJs.
 ### Milestone 4
 
 - [ ] Add Dark theme
+- [ ] Convert to TypeScript
 
 ## How To Use
 

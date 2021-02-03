@@ -118,21 +118,21 @@ function Job({ job }) {
 
 export default Job
 
-export async function getStaticPaths() {
-  const result = await fetch('https://jobs.github.com/positions.json')
-  const jobs = await result.json()
+// export async function getStaticPaths() {
+//   const result = await fetch('https://jobs.github.com/positions.json')
+//   const jobs = await result.json()
 
-  const paths = jobs.map(job => ({
-    params: { id: job.id },
-  }))
+//   const paths = jobs.map(job => ({
+//     params: { id: job.id },
+//   }))
 
-  return {
-    paths,
-    fallback: true,
-  }
-}
+//   return {
+//     paths,
+//     fallback: true,
+//   }
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const job = await getJob(params.id)
 
   return {
