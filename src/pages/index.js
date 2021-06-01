@@ -1,38 +1,39 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import styles from '../../styles/Home.module.css'
-import Jobs from '../../src/components/jobs/jobs'
-import JobType from '../components/job-type/job-type'
-import Layout from '../components/layout/layout'
-import Location from '../components/location/location'
-import Search from '../components/search/search'
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import styles from "../../styles/Home.module.css";
+import Jobs from "../../src/components/jobs/jobs";
+import JobType from "../components/job-type/job-type";
+import Layout from "../components/layout/layout";
+import Location from "../components/location/location";
+import Search from "../components/search/search";
+import PaginateJobs from "../components/pagination/pagination";
 
 export default function Home({ positions }) {
-  const [location, setLocation] = useState('')
+  const [location, setLocation] = useState("");
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [isFullTime, setIsFullTime] = useState(false)
-  const [isLocation, setIsLocation] = useState('')
-  const [isDescription, setIsDescription] = useState('')
+  const [isLoading, setIsLoading] = useState(false);
+  const [isFullTime, setIsFullTime] = useState(false);
+  const [isLocation, setIsLocation] = useState("");
+  const [isDescription, setIsDescription] = useState("");
 
-  const router = useRouter()
+  const router = useRouter();
 
   const searchString = [
     `?location=${isLocation}`,
-    `${isDescription ? `&description=${isDescription}` : ''}`,
-    `${isFullTime ? `&full_time=${isFullTime}` : ''}`,
-  ].join('')
+    `${isDescription ? `&description=${isDescription}` : ""}`,
+    `${isFullTime ? `&full_time=${isFullTime}` : ""}`,
+  ].join("");
 
   const getNewSearch = async () => {
-    setIsLoading(true)
-    setIsDescription('')
-    await router.push(`/${searchString}`)
-    setIsLoading(false)
-  }
+    setIsLoading(true);
+    setIsDescription("");
+    await router.push(`/${searchString}`);
+    setIsLoading(false);
+  };
 
   React.useEffect(() => {
-    getNewSearch()
-  }, [isFullTime, isLocation])
+    getNewSearch();
+  }, [isFullTime, isLocation]);
 
   return (
     <Layout>
@@ -60,13 +61,14 @@ export default function Home({ positions }) {
               />
             </div>
             <div className={styles.container_right}>
-              {isLoading ? 'loading...' : <Jobs positions={positions} />}
+              {isLoading ? "loading..." : <Jobs positions={positions} />}
+              <PaginateJobs />
             </div>
           </div>
         </div>
       </div>
     </Layout>
-  )
+  );
 }
 
 export async function getServerSideProps({
@@ -74,17 +76,17 @@ export async function getServerSideProps({
 }) {
   const url = [
     `https://jobs.github.com/positions.json?${
-      location ? `location=${location}` : ''
+      location ? `location=${location}` : ""
     }`,
-    `${description ? `&description=${description}` : ''}`,
-    `${full_time ? `&full_time=${full_time}` : ''}`,
-  ].join('')
+    `${description ? `&description=${description}` : ""}`,
+    `${full_time ? `&full_time=${full_time}` : ""}`,
+  ].join("");
 
-  const res = await fetch(url)
-  const positions = await res.json()
+  const res = await fetch(url);
+  const positions = await res.json();
   return {
     props: {
       positions,
     },
-  }
+  };
 }
