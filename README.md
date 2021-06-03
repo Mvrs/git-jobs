@@ -6,6 +6,10 @@
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
 </div>
 
+<br>
+
+> _GitHub Jobs is deprecated! New jobs will not be posted from May 19, 2021. It will shut down entirely on August 19, 2021._
+
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
