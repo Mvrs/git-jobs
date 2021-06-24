@@ -60,7 +60,8 @@ export default function Home() {
               />
             </div>
             <div className={styles.container_right}>
-              {isLoading ? "loading..." : <Jobs positions={positions} />}
+              {/* {isLoading ? "loading..." : <Jobs positions={positions} />} */}
+              Git Jobs API is deprecated :(
             </div>
           </div>
         </div>
