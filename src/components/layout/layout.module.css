@@ -30,3 +30,10 @@
   text-align: center;
   font-size: 0.75rem;
 }
+
+.repo {
+}
+
+.repo:hover {
+  color: #383a3f;
+}
