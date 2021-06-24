@@ -57,7 +57,7 @@ function Job({ job }) {
             <div className={styles.description} id="description">
               <ReactMarkdown
                 plugins={[gfm]}
-                children={job.how_to_apply}
+                children={job?.how_to_apply}
                 allowDangerousHtml
               />
             </div>
@@ -82,29 +82,29 @@ function Job({ job }) {
           <div className={styles.row}>
             {job.company_logo ? (
               <div className={styles.company_logo}>
-                <img src={job.company_logo} alt={job.company} />
+                <img src={job?.company_logo} alt={job?.company} />
               </div>
             ) : (
               <div className={styles.company_logo_not_found}>
-                <img src={job.company_logo} />
+                <img src={job?.company_logo} />
                 <p className={styles.text}>not found</p>
               </div>
             )}
             <div className={styles.job_info_container}>
-              <div className={styles.company}>{job.company}</div>
+              <div className={styles.company}>{job?.company}</div>
               <div className={styles.info_container}>
                 <PublicRoundedIcon
                   className={classes.location}
                   color="disabled"
                 />
-                <div className={styles.job_location}>{job.location}</div>
+                <div className={styles.job_location}>{job?.location}</div>
               </div>
             </div>
           </div>
 
           <div className={styles.job_description}>
             <p className={styles.job_company_info}>
-              <ReactMarkdown plugins={[gfm]} children={job.description} />
+              <ReactMarkdown plugins={[gfm]} children={job?.description} />
             </p>
           </div>
         </div>
