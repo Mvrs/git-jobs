@@ -53,7 +53,7 @@ export default function Home() {
               <Location
                 placeholder="City, state, zip code or country"
                 location={location}
-                positions={positions}
+                // positions={positions}
                 isLocation={isLocation}
                 setIsLocation={setIsLocation}
                 onChange={setLocation}
