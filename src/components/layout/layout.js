@@ -18,6 +18,11 @@ function Layout({ children, title = "Github Jobs" }) {
             backgroundColor: "#9055A2",
             display: "flex",
             flex: 1,
+            fontSize: "13px",
+            height: "35px",
+            alignItems: "center",
+            justifyItems: "center",
+
             color: "white",
             borderRadius: 4,
             justifyContent: "center",

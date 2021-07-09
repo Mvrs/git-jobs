@@ -59,7 +59,10 @@ export default function Home() {
                 onChange={setLocation}
               />
             </div>
-            <div className={styles.container_right}>
+            <div
+              className={styles.container_right}
+              style={{ paddingTop: "2rem" }}
+            >
               {/* {isLoading ? "loading..." : <Jobs positions={positions} />} */}
               Git Jobs API is deprecated :(
             </div>
